@@ -2,6 +2,7 @@
 @import "vars";
 @import "fonts";
 @import "libs";
+@import "mixins";
 @import "global";
 
 //==========================================HEADER=========================================
@@ -42,12 +43,8 @@
 	&__main-item + &__main-item {
 		margin-left: 40px;
 	}
-	&__main-link {
-		transition: all 0.3s;
-		&:hover {
-			color: $accent;
-		}
-	}
+	// &__main-link {
+	// }
 }
 
 .menu {
@@ -63,10 +60,6 @@
 		padding: 15px;
 		@extend %r-500;
 		line-height: 21px;
-		transition: all 0.3s;
-		&:hover {
-			color: $accent;
-		}
 	}
 }
 
@@ -79,10 +72,6 @@
 		margin-right: 27px;
 		padding: 10px;
 		@extend %r-500;
-		transition: all 0.3s;
-		&:hover {
-			color: $accent;
-		}
 	}
 	// &__btn {
 	// }
@@ -91,7 +80,33 @@
 //=========================================PARTNERS=========================================
 //=========================================PARTNERS=========================================
 
-
+.partners {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+	}
+  &__title {
+		margin-bottom: 31px;
+		@include smiles('../images/astronaut.png', 231px, 192px, 13px, -14px, .6);
+  }
+  &__text {
+		max-width: 920px;
+		margin-bottom: 115px;
+  }
+  &__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+		filter: grayscale(1);
+  }
+  &__item {
+		padding: 0 15px;
+  }
+}
 
 
 

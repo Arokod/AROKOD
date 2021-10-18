@@ -6,6 +6,13 @@ body {
 	line-height: 27px;
 }
 
+a {
+	transition: all 0.3s;
+	&:hover {
+		color: $accent;
+	}
+}
+
 .wrapper {
 	min-height: 100%;
 	overflow: hidden;
@@ -13,6 +20,7 @@ body {
 
 .container {
 	max-width: 1520px;
+	height: 100%;
 	padding: 0 15px;
 	margin: 0 auto;
 }
@@ -44,8 +52,18 @@ body {
 	font-size: 16px;
 	line-height: 42px;
 	transition: all .3s;
+	span {
+
+	}
 	&:hover {
 		color: #fff;
 		border: 1px solid #fff;
 	}
+}
+
+.title {
+	@extend %r-500;
+	font-size: 72px;
+	line-height: 85px;
+	position: relative;
 }

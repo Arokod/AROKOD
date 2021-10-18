@@ -1,0 +1,14 @@
+@mixin smiles($path, $width: 200px, $height: 200px, $top: 0, $left: 0, $opacity: .8) {
+	&::before {
+		content: "";
+		position: absolute;
+		top: $top;
+		left: $left;
+		transform: translate(-50%, -50%);
+		width: $width;
+		height: $height;
+		background: url($path) 100% / cover no-repeat;
+		z-index: -1;
+		opacity: $opacity;
+	}
+}
