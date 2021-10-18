@@ -1,30 +1,30 @@
 @font-face {
-  font-family: "Roboto-Bold";
+  font-family: "Rubik-Bold";
   font-weight: 700;
   font-style: normal;
-  src:  local("Roboto Bold"),
-        local("Roboto-Bold"),
-        url("../fonts/Roboto-Bold.woff2") format("woff2"),
-        url("../fonts/Roboto-Bold.woff") format("woff");
+  src:  local("Rubik Bold"),
+        local("Rubik-Bold"),
+        url("../fonts/rubik/Rubik-Bold.woff2") format("woff2"),
+        url("../fonts/rubik/Rubik-Bold.woff") format("woff");
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto-Medium";
+  font-family: "Rubik-Medium";
   font-weight: 500;
   font-style: normal;
-  src:  local("Roboto-Medium"),
-        local("Roboto-Medium"),
-        url("../fonts/Roboto-Medium.woff2") format("woff2"),
-        url("../fonts/Roboto-Medium.woff") format("woff");
+  src:  local("Rubik-Medium"),
+        local("Rubik-Medium"),
+        url("../fonts/rubik/Rubik-Medium.woff2") format("woff2"),
+        url("../fonts/rubik/Rubik-Medium.woff") format("woff");
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto-Regular";
+  font-family: "Rubik-Regular";
   font-weight: 400;
   font-style: normal;
-  src:  local("Roboto Regular"),
-        local("Roboto-Regular"),
-        url("../fonts/Roboto-Regular.woff2") format("woff2"),
-        url("../fonts/Roboto-Regular.woff") format("woff");
+  src:  local("Rubik Regular"),
+        local("Rubik-Regular"),
+        url("../fonts/rubik/Rubik-Regular.woff2") format("woff2"),
+        url("../fonts/rubik/Rubik-Regular.woff") format("woff");
   font-display: swap;
 }

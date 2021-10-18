@@ -4,6 +4,93 @@
 @import "libs";
 @import "global";
 
+//==========================================HEADER=========================================
+//==========================================HEADER=========================================
+
+.header {
+	display: flex;
+	flex-direction: column;
+	// &__top {
+	// }
+	&__top-inner {
+		height: 72px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// &__top-nav {
+	// }
+	// &__top-logo {
+	// }
+	// &__top-contact {
+	// }
+	&__main {
+		margin: auto 0;
+	}
+	// &__main-inner {
+	// }
+	&__main-title {
+		@extend %r-500;
+		font-size: 96px;
+		line-height: 114px;
+		max-width: 815px;
+		margin-bottom: 165px;
+	}
+	&__main-socials {
+		display: flex;
+	}
+	&__main-item + &__main-item {
+		margin-left: 40px;
+	}
+	&__main-link {
+		transition: all 0.3s;
+		&:hover {
+			color: $accent;
+		}
+	}
+}
+
+.menu {
+	&__list {
+		display: flex;
+		margin: 0 -15px;
+	}
+	&__list-item + &__list-item {
+		margin-left: 25px;
+	}
+	&__list-link {
+		display: block;
+		padding: 15px;
+		@extend %r-500;
+		line-height: 21px;
+		transition: all 0.3s;
+		&:hover {
+			color: $accent;
+		}
+	}
+}
+
+.contact-block {
+	display: flex;
+	align-items: center;
+	margin-left: -10px;
+	&__phone {
+		display: block;
+		margin-right: 27px;
+		padding: 10px;
+		@extend %r-500;
+		transition: all 0.3s;
+		&:hover {
+			color: $accent;
+		}
+	}
+	// &__btn {
+	// }
+}
+
+//=========================================PARTNERS=========================================
+//=========================================PARTNERS=========================================
+
 
 
 

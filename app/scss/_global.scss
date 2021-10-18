@@ -1,8 +1,51 @@
 body {
   background-color: $bgc;
+	@extend %r-400;
+	color: #fff;
+	font-size: 18px;
+	line-height: 27px;
 }
 
 .wrapper {
 	min-height: 100%;
 	overflow: hidden;
+}
+
+.container {
+	max-width: 1520px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.header,
+.partners,
+.services,
+.categories,
+.blog,
+.how,
+.cases,
+.testimonials,
+.team,
+.contact {
+	height: 100vh;
+}
+
+// .logo {
+// }
+
+.red-btn {
+	display: block;
+	color: $accent;
+	border: 1px solid $accent;
+	border-radius: 100px;
+	padding: 0 20px;
+	height: 44px;
+	@extend %r-500;
+	font-size: 16px;
+	line-height: 42px;
+	transition: all .3s;
+	&:hover {
+		color: #fff;
+		border: 1px solid #fff;
+	}
 }
