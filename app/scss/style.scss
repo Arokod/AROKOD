@@ -89,7 +89,7 @@
 	}
 	&__title {
 		margin-bottom: 31px;
-		@include smiles("../images/astronaut.png", 231px, 192px, 13px, -14px, 0.6);
+		@include smiles("../images/astronaut.png", 231px, 192px, 13px, -14px);
 	}
 	&__text {
 		max-width: 920px;
@@ -124,6 +124,7 @@
 	}
 	&__title {
 		margin-bottom: 80px;
+		@include smiles("../images/rocket.png", 275px, 242px, 20px, 0px);
 	}
 	&__tab-list {
 		padding-left: 190px;

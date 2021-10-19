@@ -1,4 +1,4 @@
-@mixin smiles($path, $width: 200px, $height: 200px, $top: 0, $left: 0, $opacity: .8) {
+@mixin smiles($path, $width: 200px, $height: 200px, $top: 0, $left: 0, $opacity: .6) {
 	&::before {
 		content: "";
 		position: absolute;
