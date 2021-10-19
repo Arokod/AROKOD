@@ -87,25 +87,93 @@
 		justify-content: center;
 		height: 100%;
 	}
-  &__title {
+	&__title {
 		margin-bottom: 31px;
-		@include smiles('../images/astronaut.png', 231px, 192px, 13px, -14px, .6);
-  }
-  &__text {
+		@include smiles("../images/astronaut.png", 231px, 192px, 13px, -14px, 0.6);
+	}
+	&__text {
 		max-width: 920px;
 		margin-bottom: 115px;
-  }
-  &__list {
+	}
+	&__list {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		flex-wrap: wrap;
 		margin: 0 -15px;
 		filter: grayscale(1);
-  }
-  &__item {
+	}
+	&__item {
 		padding: 0 15px;
-  }
+	}
+}
+
+//=========================================PARTNERS=========================================
+//=========================================PARTNERS=========================================
+
+.services {
+	&__inner {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		margin: 0 -15px;
+	}
+	&__col-tabs {
+		flex: 0 0 50%;
+		padding: 0 15px;
+	}
+	&__title {
+		margin-bottom: 80px;
+	}
+	&__tab-list {
+		padding-left: 190px;
+	}
+	&__tab-item {
+		margin-bottom: 30px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__tab-link {
+		font-size: 24px;
+		line-height: 28px;
+		transition: all .3s;
+		&--active {
+			@extend %r-700;
+		}
+	}
+	&__col-images {
+		flex: 0 0 50%;
+		height: 100%;
+		padding: 0 15px;
+		position: relative;
+	}
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0;
+		visibility: hidden;
+		transition: all .3s;
+		img {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			height: 100%;
+			width: 100%;
+			transform: translateY(-50%);
+			max-height: 885px;
+			object-fit: contain;
+			object-position: 100%;
+		}
+		&--show {
+			transition: all .3s .3s;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
 }
 
 
