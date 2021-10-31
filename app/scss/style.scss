@@ -500,7 +500,212 @@
   }
 }
 
+//========================================= TEAM =========================================
+//========================================= TEAM =========================================
 
+.team {
+  padding: 200px 0 130px;
+  &__title {
+    margin-bottom: 10px;
+    @include smiles("../images/heart.png", 96px, 97px, 32px, -18px);
+  }
+  &__text {
+    max-width: 920px;
+    margin-bottom: 110px;
+  }
+  &__slider {
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1000px;
+      z-index: 10;
+    }
+    &::before {
+      left: 0;
+      transform: translateX(-100%);
+      background: linear-gradient(90deg, $bgc 0%, $bgc 77%, #00000000 100%);
+    }
+    &::after {
+      right: 0;
+      transform: translateX(100%);
+      background: linear-gradient(270deg, $bgc 0%, $bgc 77%, #00000000 100%);
+    }
+  }
+  .slick-list {
+    overflow: visible;
+  }
+  .slick-slide {
+    &:last-child {
+      .team__slide-inner {
+        margin-right: 0;
+      }
+    }
+  }
+  &__slide {
+    width: auto;
+  }
+  &__slide-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 100px;
+  }
+  &__img-box {
+    width: 375px;
+    height: 375px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 30px;
+    filter: grayscale(1);
+  }
+  &__name {
+    @extend %r-500;
+  }
+}
+
+//========================================= CONTACT =========================================
+//========================================= CONTACT =========================================
+
+.contact {
+  padding: 180px 0 350px;
+  &__title {
+    margin-bottom: 25px;
+  }
+  &__text {
+    max-width: 920px;
+    margin-bottom: 90px;
+  }
+  &__form {
+    display: flex;
+    max-width: 980px;
+  }
+  &__form-col {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 85px;
+    &:last-child {
+      margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  &__form-label {
+    display: flex;
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 20px;
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 25px;
+      transform: translate(-50%, -50%);
+      line-height: 0;
+      font-size: 20px;
+    }
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  &__form-input,
+  &__form-textarea {
+    display: block;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: 8px 10px;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 400px;
+    &::placeholder {
+      color: #878787;
+    }
+  }
+  &__form-textarea {
+    resize: none;
+    margin-bottom: 20px;
+    height: auto;
+    max-height: 108px;
+    transition: all .3s;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #fff;
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: rgb(43, 40, 40);
+      border-radius: 5px;
+    }
+  }
+  &__form-btn {
+    background-color: transparent;
+    max-width: 115px;
+  }
+}
+
+//========================================= FOOTER =========================================
+//========================================= FOOTER =========================================
+
+.footer {
+  background-color: #000;
+  padding: 80px 0;
+  &__heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 65px;
+  }
+  &__logo {
+    margin-right: 50px;
+  }
+  &__text {
+    @extend %r-500;
+    font-size: 17px;
+    color: #71767f;
+    max-width: 290px;
+  }
+  &__list {
+    display: flex;
+    margin-bottom: 60px;
+  }
+  &__item {
+    margin-right: 60px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    @extend %r-500;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  &__socials {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  &__social-link {
+    margin-right: 55px;
+    font-size: 27px;
+    line-height: 0;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__copy {
+    color: #909090;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
 
 
 
