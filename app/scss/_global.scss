@@ -13,9 +13,58 @@ a {
   }
 }
 
+#container {
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
+  padding: 0 33px 0 0;
+}
+
+.ssb_down {
+  display: none;
+  background-color: #ffffff;
+  bottom:0;
+  cursor: pointer;
+  position:absolute;
+  right:0;
+}
+
+.ssb_sb {
+  background-color: #ffffff;
+  cursor: pointer;
+  position:absolute;
+  right:0;
+}
+
+.ssb_sb_down {
+  background-color: #ffffff;
+}
+
+.ssb_sb_over {
+  background-color: #ffffff;
+}
+
+.ssb_st {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  height:100%;
+  position:absolute;
+  right:0;
+  top:0;
+}
+
+.ssb_up {
+  display: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  position:absolute;
+  right:0;
+  top:0;
 }
 
 .container {

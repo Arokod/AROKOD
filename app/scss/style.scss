@@ -15,15 +15,16 @@
 	// &__top {
 	// }
 	&__top-inner {
-		height: 72px;
+		min-height: 72px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 	// &__top-nav {
 	// }
-	// &__top-logo {
-	// }
+	&__top-logo {
+    margin: 0 15px;
+	}
 	// &__top-contact {
 	// }
 	&__main {
@@ -84,8 +85,10 @@
     flex: 0 0 auto;
 		@extend %r-500;
 	}
-	// &__btn {
-	// }
+	&__btn {
+    max-width: 175px;
+    flex: 0 0 auto;
+	}
 }
 
 //========================================= PARTNERS =========================================
