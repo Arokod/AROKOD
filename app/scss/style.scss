@@ -537,30 +537,32 @@
   }
   .slick-list {
     overflow: visible;
-  }
-  .slick-slide {
-    &:last-child {
-      .team__slide-inner {
-        margin-right: 0;
-      }
-    }
+    margin: 0 -55px;
   }
   &__slide {
-    width: auto;
+    padding: 0 55px;
   }
   &__slide-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 100px;
   }
   &__img-box {
-    width: 375px;
-    height: 375px;
+    width: 100%;
+    padding: 0px 0px 100% 0px;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 30px;
     filter: grayscale(1);
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
   &__name {
     @extend %r-500;
@@ -661,7 +663,7 @@
   &__heading {
     display: flex;
     align-items: center;
-    margin-bottom: 65px;
+    margin-bottom: 58px;
   }
   &__logo {
     margin-right: 50px;
@@ -674,7 +676,7 @@
   }
   &__list {
     display: flex;
-    margin-bottom: 60px;
+    margin-bottom: 53px;
   }
   &__item {
     margin-right: 60px;
@@ -683,9 +685,10 @@
     }
   }
   &__link {
+    display: block;
     @extend %r-500;
     font-size: 15px;
-    line-height: 18px;
+    line-height: 50px;
   }
   &__socials {
     display: flex;
@@ -706,9 +709,5 @@
     line-height: 20px;
   }
 }
-
-
-
-
 
 @import "media";

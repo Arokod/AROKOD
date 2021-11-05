@@ -1,60 +1,61 @@
 body {
   background-color: $bgc;
-	@extend %r-400;
-	color: #fff;
-	font-size: 18px;
-	line-height: 27px;
+  @extend %r-400;
+  color: #fff;
+  font-size: 18px;
+  line-height: 27px;
 }
 
 a {
-	transition: all 0.3s;
-	&:hover {
-		color: $accent;
-	}
+  transition: all 0.3s;
+  &:hover {
+    color: $accent;
+  }
 }
 
 .wrapper {
-	min-height: 100%;
-	overflow: hidden;
+  min-height: 100%;
+  overflow: hidden;
 }
 
 .container {
-	max-width: 1520px;
-	// height: 100%;
-	padding: 0 15px;
-	margin: 0 auto;
+  max-width: 1520px;
+  // height: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 // .logo {
 // }
 
 .red-btn {
-	display: block;
-	color: $accent;
-	border: 1px solid $accent;
-	border-radius: 100px;
-	padding: 0 20px;
-	height: 44px;
+  display: block;
+  color: $accent;
+  border: 1px solid $accent;
+  border-radius: 100px;
+  padding: 0 20px;
+  height: 44px;
   width: 100%;
-	@extend %r-500;
-	font-size: 16px;
+  @extend %r-500;
+  font-size: 16px;
   line-height: 0;
-	transition: all .3s;
+  transition: all 0.3s;
   display: flex;
   justify-content: space-between;
   align-items: center;
-	span {
+  span {
     font-size: 13px;
-	}
-	&:hover {
-		color: #fff;
-		border: 1px solid #fff;
-	}
+  }
+  &:hover {
+    color: #fff;
+    border: 1px solid #fff;
+  }
 }
 
 .title {
-	@extend %r-500;
-	font-size: 72px;
-	line-height: 85px;
-	position: relative;
+  @extend %r-500;
+  font-size: 72px;
+  line-height: 85px;
+  position: relative;
 }
+

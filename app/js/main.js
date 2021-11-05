@@ -9,9 +9,9 @@ $(function () {
 
   $('.team__slider-inner').slick({
     arrows: false,
-    slidesToShow: 3,
+    slidesToShow: 3.5,
     infinite: false,
-    variableWidth: true,
+    // variableWidth: true,
   })
 
   $('.testimonials__slider-inner').slick({
