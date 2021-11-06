@@ -1,0 +1,112 @@
+@media (max-width: 1200px) {
+  .menu {
+    &__list-item + &__list-item {
+      margin-left: 0;
+    }
+    &__list {
+      margin: 0 -10px;
+    }
+    &__list-link {
+      padding: 15px 10px;
+    }
+  }
+  .contact-block {
+    &__phone {
+      margin-right: 20px;
+    }
+    &__btn {
+      padding: 0 20px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .overlay {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 50;
+    transition: all .3s;
+    &--show {
+      transition: all .3s;
+      opacity: .5;
+      visibility: visible;
+    }
+  }
+  .burger-btn {
+    display: block;
+  }
+  .header {
+    &__top-inner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 50%;
+      transform: translateX(-101%);
+      min-width: 300px;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px 15px 30px 15px;
+      background-color: $bgc;
+      border-bottom-right-radius: 5px;
+      border-right: 1px solid $sub;
+      border-bottom: 1px solid $sub;
+      z-index: 100;
+      transition: all .3s;
+      &--open {
+        transform: translateX(0);
+        .header__top-nav {
+          transform: translateX(0px);
+          opacity: 1;
+        }
+        .header__top-logo {
+          transform: translateX(0px);
+          opacity: 1;
+        }
+        .header__top-contact {
+          transform: translateX(0px);
+          opacity: 1;
+        }
+      }
+    }
+    &__top-nav {
+      order: 1;
+      margin-bottom: 50px;
+      transform: translateX(-100px);
+      opacity: 0;
+      transition: all .3s .2s;
+    }
+    &__top-logo {
+      margin: 0px 0px 50px 0px;
+      align-self: flex-end;
+      transform: translateX(-100px);
+      opacity: 0;
+      transition: all .3s .2s;
+    }
+    &__top-contact {
+      order: 2;
+      transform: translateX(-100px);
+      opacity: 0;
+      transition: all .3s .2s;
+    }
+  }
+  .menu {
+    &__list {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+    }
+  }
+  .contact-block {
+    flex-direction: column;
+    align-items: flex-end;
+    &__phone {
+      margin: 0px 0px 20px 0px;
+    }
+  }
+}

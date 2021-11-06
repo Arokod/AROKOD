@@ -77,11 +77,9 @@
 .contact-block {
 	display: flex;
 	align-items: center;
-	margin-left: -10px;
 	&__phone {
 		display: block;
 		margin-right: 27px;
-		padding: 10px;
     flex: 0 0 auto;
 		@extend %r-500;
 	}
