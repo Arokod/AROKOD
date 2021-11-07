@@ -112,6 +112,10 @@
 	}
 	&__item {
 		padding: 0 15px;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
 	}
 }
 
@@ -132,6 +136,9 @@
 	&__title {
 		margin-bottom: 80px;
 		@include smiles("../images/rocket.png", 275px, 242px, 20px, 0px);
+    &--mobile {
+      display: none;
+    }
 	}
 	&__tab-list {
 		padding-left: 190px;
@@ -152,26 +159,57 @@
 	}
 	&__col-images {
 		flex: 0 0 50%;
-		padding: 0 15px;
     text-align: right;
 		position: relative;
+		padding: 0 15px 60%;
 	}
 	&__image {
-    max-width: 100%;
     position: absolute;
     top: 0;
     right: 15px;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
 		&--show {
-      position: static;
 			transition: all .3s .3s;
 			opacity: 1;
 			visibility: visible;
 		}
 	}
 }
+
+// &__col-images {
+//   flex: 0 0 50%;
+//   position: relative;
+//   padding: 0 15px 60%;
+// }
+// &__image {
+//   max-width: 100%;
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   top: 0;
+//   right: 15px;
+//   visibility: hidden;
+//   opacity: 0;
+//   transition: all .3s;
+//   img {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 100%;
+//     width: 100%;
+//     object-fit: contain;
+//   }
+//   &--show {
+//     transition: all .3s .3s;
+//     opacity: 1;
+//     visibility: visible;
+//   }
+// }
 
 //========================================= CATEGORIES =========================================
 //========================================= CATEGORIES =========================================
@@ -248,13 +286,25 @@
     }
   }
   &__image-box {
-    flex: 1 0 auto;
-    margin: 0 80px 0 0;
-    position: relative;
+    width: 100%;
     max-width: 845px;
+    margin: 0 80px 0 0;
+  }
+  &__image {
+    padding: 0px 0px 64% 0px;
+    min-height: 100%;
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
   &__item-content {
-    max-width: 565px;
+    max-width: 37%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -357,6 +407,9 @@
   }
   &__btn {
     max-width: 140px;
+    &--mobile {
+      display: none;
+    }
   }
   &__text {
     max-width: 670px;
@@ -364,9 +417,8 @@
   }
   &__items {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 370px);
     grid-template-columns: repeat(3, 1fr);
-    height: 750px;
     column-gap: 40px;
     row-gap: 35px;
   }
@@ -432,26 +484,34 @@
   }
   &__slide-inner {
     display: flex;
+    align-items: center;
   }
   .slick-list {
     margin-bottom: -8px;
   }
   &__img-box {
+    width: 100%;
+    max-width: 616px;
+    overflow: hidden;
     margin-right: 60px;
+    align-self: stretch;
   }
-  &__content {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
+  &__img {
+    padding: 0px 0px 100% 0px;
     min-height: 100%;
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-bottom: 39px;
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
   &__quote {
-    padding: 5px 0 0 30px;
+    max-width: 40.5%;
+    padding: 5px 0 100px 30px;
     position: relative;
     &::before {
       content: url("../images/quotes-mini.svg");
@@ -479,14 +539,19 @@
     left: 0;
     right: 0;
     display: flex;
+  }
+  &__indent {
+    width: 100%;
+    max-width: 616px;
+    margin-right: 60px;
+  }
+  &__main {
+    display: flex;
     align-items: center;
     font-size: 24px;
-    &::before {
-      content: "";
-      width: 100%;
-      max-width: 616px;
-      margin-right: 75px;
-    }
+    padding-left: 15px;
+    width: 100%;
+    max-width: 40.5%;
     span {
       display: block;
       width: 97px;
@@ -547,6 +612,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
   &__img-box {
     width: 100%;
@@ -567,6 +633,31 @@
   }
   &__name {
     @extend %r-500;
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    line-height: 0;
+    margin-top: 30px;
+    li {
+      margin-right: 50px;
+      &:last-child {
+        margin-right: 0px;
+      }
+      button {
+        font-size: 0;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #ffffff23;
+        transition: all .3s;
+      }
+      &.slick-active {
+        button {
+          background-color: #fff;
+        }
+      }
+    }
   }
 }
 

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body id="body">
   <div class="wrapper">
     <header class="header">
       <div class="header__top">
@@ -23,16 +23,16 @@
             <nav class="header__top-nav menu">
               <ul class="menu__list">
                 <li class="menu__list-item">
-                  <a class="menu__list-link" href="#">Кейсы</a>
+                  <a class="menu__list-link" href="#cases">Кейсы</a>
                 </li>
                 <li class="menu__list-item">
-                  <a class="menu__list-link" href="#">Контакты</a>
+                  <a class="menu__list-link" href="#team">Контакты</a>
                 </li>
                 <li class="menu__list-item">
-                  <a class="menu__list-link" href="#">Услуги</a>
+                  <a class="menu__list-link" href="#servises">Услуги</a>
                 </li>
                 <li class="menu__list-item">
-                  <a class="menu__list-link" href="#">Блог</a>
+                  <a class="menu__list-link" href="#blog">Блог</a>
                 </li>
               </ul>
             </nav>
@@ -41,7 +41,7 @@
             </a>
             <div class="header__top-contact contact-block">
               <a class="contact-block__phone" href="tel:">+7 (999) 999-99-99</a>
-              <a class="contact-block__btn red-btn" href="#">
+              <a class="contact-block__btn red-btn" href="#contact">
                 Оставить заявку
               </a>
             </div>
@@ -102,11 +102,12 @@
         </ul>
       </div>
     </section>
-    <section class="services">
+    <section class="services" id="services">
       <div class="container">
+        <h2 class="services__title services__title--mobile title">Our services</h2>
         <div class="services__inner">
           <div class="services__col-tabs">
-            <h2 class="services__title title">Our services</h2>
+            <h2 class="services__title services__title--desk title">Our services</h2>
             <ul class="services__tab-list">
               <li class="services__tab-item">
                 <a class="services__tab-link" href="#smm">Smm & strategy in social media</a>
@@ -176,13 +177,15 @@
         </div>
       </div>
     </section>
-    <section class="blog">
+    <section class="blog" id="blog">
       <div class="container">
         <h2 class="blog__title title">Our blog</h2>
         <div class="blog__content">
           <div class="blog__item blog__item--show" id="blog1">
             <div class="blog__image-box">
-              <img src="images/people.jpg" alt="">
+              <div class="blog__image">
+                <img src="images/people.jpg" alt="">
+              </div>
             </div>
             <div class="blog__item-content">
               <h3 class="blog__item-title">
@@ -201,7 +204,9 @@
           </div>
           <div class="blog__item" id="blog2">
             <div class="blog__image-box">
-              <img src="images/people.jpg" alt="">
+              <div class="blog__image">
+                <img src="images/people.jpg" alt="">
+              </div>
             </div>
             <div class="blog__item-content">
               <h3 class="blog__item-title">
@@ -220,7 +225,9 @@
           </div>
           <div class="blog__item" id="blog3">
             <div class="blog__image-box">
-              <img src="images/people.jpg" alt="">
+              <div class="blog__image">
+                <img src="images/people.jpg" alt="">
+              </div>
             </div>
             <div class="blog__item-content">
               <h3 class="blog__item-title">
@@ -239,7 +246,7 @@
           </div>
         </div>
         <div class="blog__tabs">
-          <a href="#blog1" class="blog__tab">
+          <a class="blog__tab" href="#blog1">
             <div class="blog__tabs-subtitle">Development</div>
             <h6 class="blog__tabs-title">
               How to deal with subjective feedback from client
@@ -248,7 +255,7 @@
               Наша команда состоит из высококлассных специалистов с международным опытом...
             </p>
           </a>
-          <a href="#blog2" class="blog__tab">
+          <a class="blog__tab" href="#blog2">
             <div class="blog__tabs-subtitle">Marketing</div>
             <h6 class="blog__tabs-title">
               How to pretent you know something you really dont
@@ -257,7 +264,7 @@
               Наша команда состоит из высококлассных специалистов с международным опытом...
             </p>
           </a>
-          <a href="#blog3" class="blog__tab">
+          <a class="blog__tab" href="#blog3">
             <div class="blog__tabs-subtitle">Development</div>
             <h6 class="blog__tabs-title">
               What software is our favourite and why
@@ -342,11 +349,11 @@
         </div>
       </div>
     </section>
-    <section class="cases">
+    <section class="cases" id="cases">
       <div class="container">
         <div class="cases__title-row">
           <h2 class="cases__title title">Our cases</h2>
-          <a class="cases__btn red-btn" href="#">
+          <a class="cases__btn cases__btn--desk red-btn" href="#">
             Show all
             <span class="icn-right"></span>
           </a>
@@ -355,6 +362,10 @@
           Наша команда состоит из высококлассных специалистов с международным опытом работы в сфере
           Web-разработки, мобильной разработки,
         </p>
+        <a class="cases__btn cases__btn--mobile red-btn" href="#">
+          Show all
+          <span class="icn-right"></span>
+        </a>
         <div class="cases__items">
           <div class="cases__item cases__item--light-img">
             <!-- <img src="" alt=""> -->
@@ -400,91 +411,94 @@
             <div class="testimonials__slide">
               <div class="testimonials__slide-inner">
                 <div class="testimonials__img-box">
-                  <img src="images/man.jpg" alt="">
+                  <div class="testimonials__img">
+                    <img src="images/man.jpg" alt="">
+                  </div>
                 </div>
-                <div class="testimonials__content">
-                  <blockquote class="testimonials__quote">
-                    <p class="testimonials__quote-text">
-                      Наша команда состоит из высококлассных специалистов с международным опытом работы в сфере
-                      Web-разработки, мобильной разработки, Product менеджмента и дизайна.
-                    </p>
-                    <p class="testimonials__quote-text">
-                      Мы предоставляем премиум сервис по доступным ценам и всегда нацелены на успех наших клиентов.
-                    </p>
-                    <p class="testimonials__quote-text">
-                      Наша команда состоит из высококлассных специалистов с международным опытом работы в сфере
-                      Web-разработки, мобильной разработки, Product менеджмента и дизайна.
-                    </p>
-                    <div class="testimonials__author">
-                      <div class="testimonials__author-name">Henry Paddington</div>
-                      <div class="testimonials__author-position">TextLab CEO</div>
-                    </div>
-                  </blockquote>
-                </div>
+                <blockquote class="testimonials__quote">
+                  <p class="testimonials__quote-text">
+                    Наша команда состоит из высококлассных специалистов с международным опытом работы в сфере
+                    Web-разработки, мобильной разработки, Product менеджмента и дизайна.
+                  </p>
+                  <p class="testimonials__quote-text">
+                    Мы предоставляем премиум сервис по доступным ценам и всегда нацелены на успех наших клиентов.
+                  </p>
+                  <p class="testimonials__quote-text">
+                    Наша команда состоит из высококлассных специалистов с международным опытом работы в сфере
+                    Web-разработки, мобильной разработки, Product менеджмента и дизайна.
+                  </p>
+                  <div class="testimonials__author">
+                    <div class="testimonials__author-name">Henry Paddington</div>
+                    <div class="testimonials__author-position">TextLab CEO</div>
+                  </div>
+                </blockquote>
               </div>
             </div>
             <div class="testimonials__slide">
               <div class="testimonials__slide-inner">
                 <div class="testimonials__img-box">
-                  <img src="images/man.jpg" alt="">
+                  <div class="testimonials__img">
+                    <img src="images/man.jpg" alt="">
+                  </div>
                 </div>
-                <div class="testimonials__content">
-                  <blockquote class="testimonials__quote">
-                    <p class="testimonials__quote-text">
-                      Наша команда состоит из высококлассных специалистов с международным опытом работы в сфере
-                      Web-разработки, мобильной разработки, Product менеджмента и дизайна.
-                    </p>
-                    <p class="testimonials__quote-text">
-                      Мы предоставляем премиум сервис по доступным ценам и всегда нацелены на успех наших клиентов.
-                    </p>
-                    <p class="testimonials__quote-text">
-                      Наша команда состоит из высококлассных специалистов с международным опытом работы в сфере
-                      Web-разработки, мобильной разработки, Product менеджмента и дизайна.
-                    </p>
-                    <div class="testimonials__author">
-                      <div class="testimonials__author-name">Henry Paddington</div>
-                      <div class="testimonials__author-position">TextLab CEO</div>
-                    </div>
-                  </blockquote>
-                </div>
+                <blockquote class="testimonials__quote">
+                  <p class="testimonials__quote-text">
+                    Наша команда состоит из высококлассных специалистов с международным опытом работы в сфере
+                    Web-разработки, мобильной разработки, Product менеджмента и дизайна.
+                  </p>
+                  <p class="testimonials__quote-text">
+                    Мы предоставляем премиум сервис по доступным ценам и всегда нацелены на успех наших клиентов.
+                  </p>
+                  <p class="testimonials__quote-text">
+                    Наша команда состоит из высококлассных специалистов с международным опытом работы в сфере
+                    Web-разработки, мобильной разработки, Product менеджмента и дизайна.
+                  </p>
+                  <div class="testimonials__author">
+                    <div class="testimonials__author-name">Henry Paddington</div>
+                    <div class="testimonials__author-position">TextLab CEO</div>
+                  </div>
+                </blockquote>
               </div>
             </div>
             <div class="testimonials__slide">
               <div class="testimonials__slide-inner">
                 <div class="testimonials__img-box">
-                  <img src="images/man.jpg" alt="">
+                  <div class="testimonials__img">
+                    <img src="images/man.jpg" alt="">
+                  </div>
                 </div>
-                <div class="testimonials__content">
-                  <blockquote class="testimonials__quote">
-                    <p class="testimonials__quote-text">
-                      Наша команда состоит из высококлассных специалистов с международным опытом работы в сфере
-                      Web-разработки, мобильной разработки, Product менеджмента и дизайна.
-                    </p>
-                    <p class="testimonials__quote-text">
-                      Мы предоставляем премиум сервис по доступным ценам и всегда нацелены на успех наших клиентов.
-                    </p>
-                    <p class="testimonials__quote-text">
-                      Наша команда состоит из высококлассных специалистов с международным опытом работы в сфере
-                      Web-разработки, мобильной разработки, Product менеджмента и дизайна.
-                    </p>
-                    <div class="testimonials__author">
-                      <div class="testimonials__author-name">Henry Paddington</div>
-                      <div class="testimonials__author-position">TextLab CEO</div>
-                    </div>
-                  </blockquote>
-                </div>
+                <blockquote class="testimonials__quote">
+                  <p class="testimonials__quote-text">
+                    Наша команда состоит из высококлассных специалистов с международным опытом работы в сфере
+                    Web-разработки, мобильной разработки, Product менеджмента и дизайна.
+                  </p>
+                  <p class="testimonials__quote-text">
+                    Мы предоставляем премиум сервис по доступным ценам и всегда нацелены на успех наших клиентов.
+                  </p>
+                  <p class="testimonials__quote-text">
+                    Наша команда состоит из высококлассных специалистов с международным опытом работы в сфере
+                    Web-разработки, мобильной разработки, Product менеджмента и дизайна.
+                  </p>
+                  <div class="testimonials__author">
+                    <div class="testimonials__author-name">Henry Paddington</div>
+                    <div class="testimonials__author-position">TextLab CEO</div>
+                  </div>
+                </blockquote>
               </div>
             </div>
           </div>
           <div class="testimonials__btns">
-            <a class="testimonials__prev" href="#">Prev</a>
-            <span></span>
-            <a class="testimonials__next" href="#">Next</a>
+            <div class="testimonials__indent"></div>
+            <div class="testimonials__main">
+              <a class="testimonials__prev" href="#">Prev</a>
+              <span></span>
+              <a class="testimonials__next" href="#">Next</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="team">
+    <section class="team" id="team">
       <div class="container">
         <h2 class="team__title title">Meet our team</h2>
         <p class="team__text">
@@ -534,7 +548,7 @@
         </div>
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="container">
         <h2 class="contact__title title">Let’s talk</h2>
         <p class="contact__text">
@@ -567,7 +581,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__heading">
-          <a class="footer__logo logo" href="#">
+          <a class="footer__logo logo" href="#body">
             <img src="images/logo.png" alt="Логотип команды">
           </a>
           <p class="footer__text">

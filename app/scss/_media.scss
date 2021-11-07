@@ -1,3 +1,38 @@
+// ------------------------------------------- 1630 -----------------------------------------------
+@media (max-width: 1630px) {
+  // .title {
+  //   padding: 0px 0px 0px 40px;
+  // }
+  .partners,
+  .services,
+  .blog,
+  .how,
+  .cases,
+  .testimonials,
+  .team,
+  .contact {
+    &__title {
+      &::before {
+        top: -20px;
+        left: 40px;
+      }
+    }
+  }
+}
+
+// ------------------------------------------- 1400 -----------------------------------------------
+@media (max-width: 1400px) {
+  .partners {
+    &__list {
+      justify-content: center;
+    }
+    &__item {
+      margin: 0px 0px 40px 0px;
+    }
+  }
+}
+
+// ------------------------------------------- 1200 -----------------------------------------------
 @media (max-width: 1200px) {
   .menu {
     &__list-item + &__list-item {
@@ -18,8 +53,52 @@
       padding: 0 20px;
     }
   }
+  // -------------------------------------------
+  .services {
+    &__tab-list {
+      padding-left: 85px;
+    }
+  }
+  // -------------------------------------------
+  .blog {
+    &__image-box {
+      margin: 0px 30px 0px 0px;
+    }
+  }
+  // -------------------------------------------
+  .how {
+    &__inner {
+      flex-direction: column;
+    }
+    &__title-box {
+      margin: 0px 0px 65px 0px;
+      max-width: none;
+    }
+  }
+  // -------------------------------------------
+  .cases {
+    &__items {
+      grid-gap: 10px;
+      grid-template-rows: repeat(2, 230px);
+    }
+    &__item-heading {
+      padding: 15px 40px;
+    }
+    &__item-title {
+    }
+  }
+  // -------------------------------------------
+  .team {
+    .slick-list {
+      margin: 0 -20px;
+    }
+    &__slide {
+      padding: 0 20px;
+    }
+  }
 }
 
+// ------------------------------------------- 992 -----------------------------------------------
 @media (max-width: 992px) {
   .overlay {
     opacity: 0;
@@ -31,16 +110,21 @@
     height: 100%;
     background-color: #000;
     z-index: 50;
-    transition: all .3s;
+    transition: all 0.3s;
     &--show {
-      transition: all .3s;
-      opacity: .5;
+      transition: all 0.3s;
+      opacity: 0.5;
       visibility: visible;
     }
   }
   .burger-btn {
     display: block;
   }
+  .title {
+    font-size: 55px;
+    line-height: 65px;
+  }
+  // -------------------------------------------
   .header {
     &__top-inner {
       position: fixed;
@@ -57,7 +141,7 @@
       border-right: 1px solid $sub;
       border-bottom: 1px solid $sub;
       z-index: 100;
-      transition: all .3s;
+      transition: all 0.3s;
       &--open {
         transform: translateX(0);
         .header__top-nav {
@@ -79,20 +163,20 @@
       margin-bottom: 50px;
       transform: translateX(-100px);
       opacity: 0;
-      transition: all .3s .2s;
+      transition: all 0.3s 0.2s;
     }
     &__top-logo {
       margin: 0px 0px 50px 0px;
       align-self: flex-end;
       transform: translateX(-100px);
       opacity: 0;
-      transition: all .3s .2s;
+      transition: all 0.3s 0.2s;
     }
     &__top-contact {
       order: 2;
       transform: translateX(-100px);
       opacity: 0;
-      transition: all .3s .2s;
+      transition: all 0.3s 0.2s;
     }
   }
   .menu {
@@ -107,6 +191,364 @@
     align-items: flex-end;
     &__phone {
       margin: 0px 0px 20px 0px;
+    }
+  }
+  // -------------------------------------------
+  .services {
+    &__tab-list {
+      padding-left: 0px;
+    }
+  }
+  // -------------------------------------------
+  .categories {
+    &__inner {
+      margin: 0 -15px;
+    }
+    &__col {
+      min-height: auto;
+      padding: 65px 15px;
+    }
+    &__num {
+      margin-bottom: 35px;
+    }
+    &__title {
+      margin-bottom: 65px;
+      font-size: 28px;
+      line-height: 35px;
+    }
+    &__text {
+      margin-bottom: 35px;
+    }
+  }
+  // -------------------------------------------
+  .blog {
+    &__item-content {
+      max-width: 50%;
+    }
+    &__item-title {
+      font-size: 32px;
+      line-height: 37px;
+    }
+    &__tabs-subtitle {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__tabs-title {
+      font-size: 18px;
+      line-height: 23px;
+    }
+    &__tabs-text {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  // -------------------------------------------
+  .cases {
+    &__item-heading {
+    }
+    &__item-title {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 0;
+    }
+    &__item-tag {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  // -------------------------------------------
+  .testimonials {
+    &__img-box {
+      margin-right: 30px;
+    }
+    &__indent {
+      margin-right: 30px;
+    }
+  }
+}
+
+// ------------------------------------------- 800 -----------------------------------------------
+@media (max-width: 800px) {
+  .header {
+    &__main-title {
+      font-size: 70px;
+      line-height: 80px;
+      max-width: 590px;
+    }
+  }
+  // -------------------------------------------
+  .services {
+    &__tab-link {
+      font-size: 18px;
+    }
+  }
+  // -------------------------------------------
+  .categories {
+    &__inner {
+      margin: 0;
+      flex-direction: column;
+    }
+    &__col {
+      padding: 65px 0;
+      &:nth-child(2) {
+        border: none;
+        border-top: 1px solid #747474;
+        border-bottom: 1px solid #747474;
+      }
+    }
+    &__num {
+      margin-bottom: 35px;
+    }
+    &__title {
+      margin-bottom: 65px;
+      font-size: 28px;
+      line-height: 35px;
+    }
+    &__text {
+      margin-bottom: 35px;
+    }
+  }
+  // -------------------------------------------
+  .blog {
+    &__item {
+      flex-direction: column;
+      &:nth-child(2) {
+        .blog__image-box {
+          order: 0;
+          margin: 0 0 30px 0;
+        }
+      }
+    }
+    &__image-box {
+      margin: 0 0 30px 0;
+    }
+    &__item-content {
+      max-width: none;
+    }
+  }
+  // -------------------------------------------
+  .how {
+    &__item {
+      flex: 0 1 50%;
+      max-width: none;
+    }
+  }
+  // -------------------------------------------
+  .cases {
+    &__items {
+      grid-template-rows: repeat(3, 230px);
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__item {
+      &:nth-child(1) {
+        grid-row: 2 / 4;
+      }
+      &:nth-child(2) {
+        grid-column: 1 / 3;
+      }
+    }
+  }
+  // -------------------------------------------
+  .testimonials {
+    &__slide-inner {
+      flex-direction: column;
+    }
+    &__img-box {
+      margin: 0 0 30px 0;
+      max-width: none;
+      max-height: 616px;
+    }
+    &__quote {
+      max-width: none;
+    }
+    &__indent {
+      display: none;
+    }
+    &__main {
+      max-width: none;
+    }
+  }
+  // -------------------------------------------
+  .contact {
+    &__form-col {
+      margin-right: 30px;
+    }
+  }
+}
+
+// ------------------------------------------- 600 -----------------------------------------------
+@media (max-width: 600px) {
+  .title {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  // -------------------------------------------
+  .header {
+    &__main-title {
+      font-size: 45px;
+      line-height: 50px;
+      max-width: 370px;
+      margin-bottom: 80px;
+    }
+  }
+  // --------------------------------------------
+  .partners {
+    &__item {
+      flex: 0 0 50%;
+    }
+  }
+  // --------------------------------------------
+  .services {
+    &__title {
+      &--desk {
+        display: none;
+      }
+      &--mobile {
+        display: block;
+      }
+    }
+    &__inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__col-tabs {
+      flex: 0 1 auto;
+      order: 2;
+    }
+    &__tab-item {
+      margin-bottom: 10px;
+    }
+    &__col-images {
+      flex: 0 1 auto;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    &__image {
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  // --------------------------------------------
+  .blog {
+    &__item-title {
+      font-size: 25px;
+      line-height: 30px;
+    }
+    &__tabs {
+      margin: 0 -5px;
+    }
+    &__tab {
+      padding: 0 5px;
+    }
+    &__tabs-title {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__tabs-text {
+      display: none;
+    }
+  }
+  // --------------------------------------------
+  .how {
+    &__item {
+      flex: 0 1 100%;
+    }
+  }
+  // --------------------------------------------
+  .contact {
+    &__form {
+      flex-direction: column;
+    }
+    &__form-col {
+      margin: 0 0 20px 0;
+      &:last-child {
+        padding-left: 31px;
+      }
+    }
+    &__form-label {
+      padding-left: 32px;
+      &::before {
+        left: 0;
+        transform: translate(0, -50%);
+      }
+    }
+    &__form-input {
+      max-width: none;
+    }
+    &__form-textarea {
+      max-width: none;
+      margin-bottom: 40px;
+    }
+  }
+  // --------------------------------------------
+  .footer {
+    &__heading {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__text {
+      max-width: none;
+    }
+    &__list {
+      flex-direction: column;
+    }
+    &__social-link {
+      font-size: 20px;
+    }
+  }
+}
+
+// ------------------------------------------- 500 -----------------------------------------------
+@media (max-width: 500px) {
+  .cases {
+    &__btn {
+      max-width: 140px;
+      &--desk {
+        display: none;
+      }
+      &--mobile {
+        display: flex;
+        margin-bottom: 30px;
+      }
+    }
+    &__text {
+      margin-bottom: 15px;
+    }
+    &__items {
+      grid-template-rows: repeat(4, 230px);
+      grid-template-columns: 1fr;
+    }
+    &__item {
+      &:nth-child(1) {
+        grid-row: auto;
+      }
+      &:nth-child(2) {
+        grid-column: auto;
+      }
+    }
+  }
+}
+
+// ------------------------------------------- 450 -----------------------------------------------
+@media (max-width: 450px) {
+  .header {
+    &__main-title {
+      font-size: 35px;
+      line-height: 42px;
+      max-width: 290px;
+    }
+    &__main-item + &__main-item {
+      margin-left: 20px;
+    }
+  }
+  // --------------------------------------------
+  .services {
+    &__tab-link {
+      font-size: 18px;
+    }
+    &__col-images {
+      padding: 0 15px 100%;
     }
   }
 }

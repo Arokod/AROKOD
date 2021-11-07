@@ -1,5 +1,14 @@
 $(function () {
 
+  // ------------------------------------- Плавный скролл -------------------------------------------
+
+  $('.menu a, .logo, .contact-block__btn, .footer__list a').on('click', function (e) {
+    e.preventDefault();
+    var id = $(this).attr('href'),
+      top = $(id).offset().top;
+    $('body,html').animate({ scrollTop: top, }, 800);
+  });
+
   // ---------------------------- Кастомный скролл в текстовом поле ---------------------------------
   const textarea = document.querySelector('.contact__form-textarea')
   textarea.addEventListener('input', () => {
@@ -46,6 +55,28 @@ $(function () {
     slidesToShow: 3.5,
     infinite: false,
     // variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2.5,
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 2,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 450,
+        settings: {
+          slidesToShow: 1,
+          dots: true,
+        }
+      },
+    ]
   })
 
   // ------------------------------------- Меню бургер ----------------------------------------------
