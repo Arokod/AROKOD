@@ -90,7 +90,7 @@ $(function () {
     }
   }, 0);
 
-  $('.burger-btn, .header__top-inner a, .overlay').on('click', function (e) {
+  $('.burger-btn, .header__top-inner--openпш a, .overlay').on('click', function (e) {
     e.preventDefault()
     $('.header__top-inner').toggleClass('header__top-inner--open')
     $('.overlay').toggleClass('overlay--show')
