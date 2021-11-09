@@ -11,7 +11,6 @@
 .header {
 	display: flex;
 	flex-direction: column;
-  height: 100vh;
 	// &__top {
 	// }
 	&__top-inner {
@@ -28,7 +27,7 @@
 	// &__top-contact {
 	// }
 	&__main {
-		margin: auto 0;
+		padding: 200px 0;
 	}
 	// &__main-inner {
 	// }
@@ -367,8 +366,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: -80px;
-    margin: 0 -10px;
+    margin: 0 -10px -80px;
   }
   &__item {
     max-width: 355px;

@@ -543,6 +543,10 @@
     }
   }
   // --------------------------------------------
+  .partners {
+    padding: 180px 0px 150px;
+  }
+  // --------------------------------------------
   .services {
     &__tab-link {
       font-size: 18px;
@@ -550,5 +554,17 @@
     &__col-images {
       padding: 0 15px 100%;
     }
+  }
+  // --------------------------------------------
+  .partners,
+  .services,
+  .categories,
+  .blog,
+  .how,
+  .cases,
+  .testimonials,
+  .team,
+  .contact {
+    padding: 150px 0 100px;
   }
 }
